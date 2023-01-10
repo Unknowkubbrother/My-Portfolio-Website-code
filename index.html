@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="title">Portfolio │ Nutchanon</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
+  <!-- Style.css -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png">
+</head>
+<body oncontextmenu="return false;">
+  <script>
+    // disable right click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+ 
+    document.onkeydown = function (e) {
+ 
+        // disable F12 key
+        if(e.keyCode == 123) {
+            return false;
+        }
+ 
+        // disable I key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+            return false;
+        }
+ 
+        // disable J key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            return false;
+        }
+ 
+        // disable U key
+        if(e.ctrlKey && e.keyCode == 85) {
+            return false;
+        }
+    }
+ 
+</script>
+  <div class="scrollTop" onclick="scrollToTop();"></div>
+  <script type="text/javascript">
+    window.addEventListener('scroll', function(){
+      var scroll = document.querySelector('.scrollTop');
+      scroll.classList.toggle("active", window.scrollY > 500)
+    })
+
+    function scrollToTop(){
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
+  </script>
+
+  <!-- Navbar -->
+  <header>
+    <a href="#" class="logo">Portfolio NAT<></a>
+    <div id="menu" class="fas fa-bars"></div>
+    <div class="space-header">
+    <nav class="navbar">
+        <ul class="ul_main">
+            <li class="links"><a class="lang_header_home" href="#">home</a></li>
+            <li class="links"><a class="lang_header_about_me" href="#about-me">about</a></li>
+            <li class="links"><a class="lang_header_personal" href="#personal">Introduce</a></li>
+            <li class="links"><a class="lang_header_education" href="#education">education</a></li>
+            <li class="links"><a class="lang_header_work" href="#work">works</a></li>
+            <li class="links"><a class="lang_header_cerfi" href="#Cerfi">Certificates</a></li>
+            <li class="links"><a class="lang_header_contact" href="#contact">contact</a></li>
+        </ul>
+    </nav>
+    <div class="language">
+      <button onclick="checklang()" class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-globe"></i>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" onclick="togglelangen()" id="lang_en" href="#">English [EN]</a></li>
+        <li><a class="dropdown-item" onclick="togglelangth()" id="lang_th" href="#">ภาษาไทย [TH]</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<!-- ------------ -->
+        <section id="home">
+          <img src="img/1.png" data-speed="-5" class="layer">
+          <img src="img/2.png" data-speed="5" class="layer">
+          <img src="img/3.png" data-speed="2" class="layer">
+          <img src="img/4.png" data-speed="6" class="layer">
+          <img src="img/5.png" data-speed="8" class="layer">
+          <img src="img/6.png" data-speed="-2" class="layer">
+          <img src="img/7.png" data-speed="4" class="layer">
+          <img src="img/8.png" data-speed="-9" class="layer">
+          <img src="img/9.png" data-speed="6" class="layer">
+          <img src="img/10.png" data-speed="-7" class="layer">
+          <img src="img/11.png" data-speed="-5" class="layer">
+          <img src="img/12.png" data-speed="-5" class="layer">
+        <div class="banner" data-speed="2">
+          <div class="text-banner">
+            <div class="text-banner1">
+            <h3 id="banner1">HELLO I'M</h3>
+            <h1 id="banner2">NUTCHANON</h1>
+            <h1 id="banner3" >SAPMEECHAI</h1>
+            <h4 id="banner4" >Sakaeo world class standard school</h4>
+            <br>
+          <div class="btn-topdf">
+            <a id="banner5" href="portfolio.pdf">PORTFOLIO TO PDF</a>
+          </div>
+        </div>
+          </div>
+          <div class="picture-profile">
+            <div class="imgBx">
+              <div class="box">
+              <img src="https://media.discordapp.net/attachments/1042036560947851328/1042036742150176808/JPEG1.jpeg?width=759&height=1013" width="200" height="250"></img>
+              </div>
+          </div>
+        </section>
+
+              <script type="text/javascript">
+                document.addEventListener("mousemove", parallax);
+                function parallax(e){
+                  this.querySelectorAll('.layer').forEach(move =>  {
+                    var moving_value = move.getAttribute("data-speed");
+                    var x = (e.clientX * moving_value) / 150;
+                    var y = (e.clientY * moving_value) / 150;
+
+                    move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+                  })
+                }
+              </script>
+              
+          <section id="about-me">
+            <div class="about-main">
+            <div class="header-aboutme" id="about1">About Me</div>
+            <div class="about-me-center">
+              <div class="space-aboutme">
+                <div class="space-aboutme-left">
+                         <div class="space-none"></div>
+                    <span class="hello-me"><h4 id="about2">Hi There! l'm Nutchanon Sapmeechai</h4></span>
+                    <div class="space-between">
+                    <div class="about-me-main-left">
+                      <div class="content-main1">
+                        <div class="icon-center">
+                          <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="top-bottom">
+                        <span class="header" id="about3">Data of birth</span><br>
+                        <span class="text" id="about4">20 March 2005</span>
+                      </div>
+                    </div>
+                    <div class="content-main2">
+                      <div class="icon-center">
+                        <i class="fas fa-phone"></i>
+                      </div>
+                      <div class="top-bottom">
+                        <span class="header" id="about5">Phone & Contact</span><br>
+                        <span class="text" id="about6">090-297-4175</span><br>
+                        <span class="text" id="about7">Lineid : lom345</span><br>
+                        <span class="text" id="about8">facebook : Natchanon Sabmeechai</span><br>
+                      </div>
+                    </div>
+                    <div class="content-main3">
+                      <div class="icon-center">
+                        <i class="fas fa-globe"></i>
+                      </div>
+                      <div class="top-bottom">
+                        <span class="header" id="about9">Language</span><br>
+                        <span class="text" id="about10" >Thai</span><br>
+                        <span class="text" id="about11" >English</span>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="about-me-main-right">
+                        <div class="content-main4">
+                      <div class="icon-center">
+                        <i class="fas fa-envelope"></i>
+                      </div>
+                      <div class="top-bottom">
+                        <span class="header" id="about12">Email</span><br>
+                        <span class="text" id="about13">natchnon654321@gmail.com</span><br>
+                      </div>
+                    </div>
+                    <div class="content-main5">
+                      <div class="icon-center">
+                        <i class="fas fa-route"></i>
+                      </div>
+                      <div class="top-bottom">
+                        <span class="header" id="about14">Address</span><br>
+                        <span class="text" id="about15">33/2 Thetsaban 8 Road,</span><br>
+                        <span class="text" id="about16">Sa Kaeo Subdistrict,Mueang</span><br>
+                        <span class="text" id="about17">Sa Kaeo District SaKaeo Province</span><br>
+                      </div>
+                    </div>
+                    <div class="content-main6">
+                      <div class="icon-center">
+                        <i class="fas fa-graduation-cap"></i>
+                      </div>
+                      <div class="top-bottom">
+                        <span class="header" id="about18">School</span><br>
+                        <span class="text" id="about19">Sakaeo world class standard school</span><br>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="space-aboutme-right">
+                  <div class="space-none1"></div>
+                    <span class="hello-me1"><h4 id="about20">Various abilitie</h4></span>
+                    <div class="content-main7">
+                      <div class="icon-center">
+                        <i class="fab fa-java"></i>
+                      </div>
+                      <div class="top-bottom">
+                        <span class="header" id="about21">Programming Language</span><br>
+                        <span class="text" >HTML,&nbsp; CSS, &nbsp;JS,&nbsp; LUA,&nbsp; PYTHON</span><br>
+                      </div>
+                    </div>
+                    <div class="content-main8">
+                      <div class="icon-center">
+                        <i class="fab fa-readme"></i>
+                      </div>
+                      <div class="top-bottom">
+                        <span class="header" id="about22">Adobe App</span><br>
+                        <span class="text">Photoshop,&nbsp; Premiere pro, &nbsp;After Effect</span><br>
+                      </div>
+                    </div>
+                    <div class="content-main9">
+                      <div class="icon-center">
+                        <i class="fab fa-windows"></i>
+                      </div>
+                      <div class="top-bottom">
+                        <span class="header" id="about23">Microsoft App</span><br>
+                        <span class="text">Word,&nbsp; Excel, &nbsp;PowerPoint</span><br>
+                      </div>
+                    </div>
+                    <div class="content-main10">
+                      <div class="icon-center">
+                        <i class="	fas fa-search-plus"></i>
+                      </div>
+                      <div class="top-bottom">
+                        <span class="header" id="about24">Other App</span><br>
+                        <span class="text">Sony Vegas,&nbsp; Sketch up</span><br>
+                      </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+          </div>
+          </section>
+
+            <!-- ------------------------------ -->
+            <div class="more-quiz">
+            <div class="con-more">
+                <div class="card1">
+                  <div class="lines"></div>
+                  <div class="imgBx">
+                    <i class="fas fa-video"></i>
+                    </div>
+                    <div class="content">
+                      <div class="details">
+                        <h2 id="more1">Video Edit</h2>
+                        <div class="actionBtn">
+                          <a href="#work" class="more2">View More</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="card1">
+                  <div class="lines"></div>
+                  <div class="imgBx">
+                    <i class="fas fa-code"></i>
+                    </div>
+                    <div class="content">
+                      <div class="details">
+                        <h2 id="more3" >Web Development</h2>
+                        <div class="actionBtn">
+                          <a href="#work" class="more2">View More</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="card1">
+                  <div class="lines"></div>
+                  <div class="imgBx">
+                    <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="content">
+                      <div class="details">
+                        <h2 id="more4">Graphic Design</h2>
+                        <div class="actionBtn">
+                          <a href="#work" class="more2">View More</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <section id="personal">
+            <div class="ps-main">
+              <div   class="header-ps" id="per1">Personal Statement</div>
+              <div class="content-ps">
+                <div class="read-content">
+                <p id="per2" style="text-indent: 2.5em;">Back when I was an elementary school student. I have a relative who is a neighbor next door. He is studying at a technical college in the computer department.
+                  It made me watch my brother playing and fixing computers all the time. Until one day I saw you playing a game on the computer and I went to stand and watch.
+                  He played games that made me want to play games like that and let me know computers. Up until junior high school, I had the opportunity
+                  Attend computer classes and get to know computer languages such as C language and Html language.
+                  I was very interested because I was wondering what computer language is and why it makes the computer do what we tell it to do.
+                  Since then, I have been interested in and studying computer languages and practicing.
+                </p>
+              <span class="content-readmore">
+                <p id="per3" style="text-indent: 2.5em;">until up In high school, I got to know an online game called Fivem, a game that was popular at that time, which was a game server that was a real person in the game (Roleplay) and I went to play that game. and have seen that there is a top-up system in order to make it easier for us to have things to use in role-playing, for example Add money to buy cars in the game. in order to drive comfortably I see this point that makes me interested because it is the point where we can earn money from that game. So I studied about that game and opened my own server where I applied the knowledge I gained from studying computers in junior high school and learned more about the language needed to run the server. such as html, Javascript, css, lua until earning money from the game server gave me programming experience, which made me want to study at the higher education level. Faculty of Science Department of Computer Science A lot in order to build on the knowledge of computer languages and computers and apply the knowledge that is actually applied in order to earn a living. my dream is I want to be a programmer and developer for a big tech company in the world. Therefore, I am confident that the Faculty of Science Department of Computer Science most suitable for me.
+                </p>
+                <p id="per4" style="text-indent: 2.5em;">
+                  However, I have been determined and interested in this faculty for a long time. ready to devote fully to study Ready to devote fully to studying and will improve myself to be a good student. And have quality all the time. Be a good role model for society and create benefits and reputation for the university and society. Upon completion of the study, I will apply the knowledge gained to the greatest benefit and further increase the maximum effect. No other faculties can answer this question as much as the Faculty of Science. Department of Computer Science This faculties consist of various types of knowledge such as Knowledge of software, security, and interesting new algorithms This faculty teaches computer thinking to allow us to look at all sides more than just looking at one side. The concept is planned step by step and the faculty is modern and suitable for the 21st century.
+                </p>
+                <p id="per5" style="text-indent: 2.5em;">
+                  However, I hope the committee sees my efforts and enthusiasm. I still insist that I will try my best to be able to study at the Faculty of Science. computer science major.
+                </p>
+              </span>
+                <div class="end-content">
+              <p id="per6">Yours faithfully</p>
+              <p id="per7">Nutchanon</p>
+              <p id="per8">(Nutchanon Sapmeechai)</p>
+            </div>
+          </div>
+            <span class="checkreadmore" id="per9">Read More</span>
+            </div>
+            </div>
+          </div>
+          </section>
+
+          <section id="education">
+            <div class="ed-main">
+              <div class="header-ed" id="ed1">My Education</div>
+              <div class="box-ed">
+                <div class="top-space">
+                  <div class="top-space-left">
+                      <div class="box1">
+                        <img src="https://media.discordapp.net/attachments/1042036560947851328/1042096946690674798/27100250_0_20181221-095418.png">
+                        <div class="old-ed">
+                          <span class="header-old" id="ed2">Present</span>
+                        </div>
+                        <hr>
+                        <div class="name-school">
+                          <span id="ed3">Sakaeo world class standard school</span>
+                        </div>
+                        <span id="major" class="ed4">Major : </span><span id="ed6">&nbsp;Arts-Math</span><br>
+                        <span id="gpax" class="ed5">GPAX : </span><span>&nbsp;3.94</span>
+                      </div>
+                  </div>
+                  <div class="top-space-right">
+                    <div class="box2">
+                      <img src="https://media.discordapp.net/attachments/1042036560947851328/1054633057795182682/wat.png?width=669&height=677">
+                      <div class="old-ed">
+                        <span class="header-old" id="ed7">Elementary school 1-6</span>
+                      </div>
+                      <hr>
+                      <div class="name-school">
+                        <span id="ed8">Wat Sa Kaeo Kindergarten</span>
+                      </div>
+                      <span id="major" class="ed4">Major : </span><span id="ed9">&nbsp;Ordinary</span><br>
+                      <span id="gpax" class="ed5">GPAX : </span><span>&nbsp;3.75</span>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="bottom-space">
+                    <div class="bottom-space-left">
+                      <div class="box3">
+                        <img src="https://media.discordapp.net/attachments/1042036560947851328/1042096946690674798/27100250_0_20181221-095418.png">
+                        <div class="old-ed">
+                          <span class="header-old" id="ed10">Secondary education 1-3</span>
+                        </div>
+                        <hr>
+                        <div class="name-school">
+                          <span id="ed11">Sakaeo world class standard school</span>
+                        </div>
+                        <span id="major"  class="ed4">Major : </span><span id="ed12">&nbsp;Sci-Math</span><br>
+                        <span id="gpax"  class="ed5">GPAX : </span><span>&nbsp;3.42</span>
+                      </div>
+                    </div>
+                    <div class="bottom-space-right">
+                      <div class="box4">
+                        <img src="https://media.discordapp.net/attachments/1042036560947851328/1042096946690674798/27100250_0_20181221-095418.png">
+                        <div class="old-ed">
+                          <span class="header-old" id="ed13">Secondary education 4-6</span>
+                        </div>
+                        <hr>
+                        <div class="name-school">
+                          <span id="ed14">Sakaeo world class standard school</span>
+                        </div>
+                        <span id="major"  class="ed4">Major : </span><span id="ed15">&nbsp;Arts-Math</span><br>
+                        <span id="gpax"  class="ed5">GPAX : </span><span>&nbsp;3.94</span>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div> 
+              </div><!-- ------------- -->
+            </section>
+
+
+          <!-- <div id="work">
+            <input type="radio" name="Photos" id="check1" checked>
+            <input type="radio" name="Photos" id="check2">
+            <input type="radio" name="Photos" id="check3">
+            <input type="radio" name="Photos" id="check4">
+        
+            <div class="work-main">
+              <div class="header-work">My Works And Activities</div>
+              <div class="space-none"></div>
+              <div class="top-content">
+                  <h3>Photo Works</h3>
+                  <label for="check1">All Photos</label>
+                  <label for="check2">Activities Computer</label>
+                  <label for="check3">Activities Classrom</label>
+                  <label for="check4">Ativities School</label>
+              </div>
+
+              <div class="photo-gallery">
+                <div class="pic place">
+                  <img src="picture/1.jpg">
+                </div>
+                <div class="pic place">
+                  <img src="picture/2.jpg">
+                </div>
+                <div class="pic place2">
+                  <img src="picture/3.jpg">
+                </div>
+                <div class="pic place3">
+                  <img src="picture/4.jpg">
+                </div>
+                <div class="pic place">
+                  <img src="picture/5.jpg">
+                </div>
+                <div class="pic place3">
+                  <img src="picture/6.jpg">
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- -------------------------------------------------- -->
+
+          <section id="work">
+              <div class="work-main">
+                <div class="header-work" id="work1">My Works And Activities</div>
+                <div class="wrapper">
+                  <!-- filter Items -->
+                  <nav>
+                    <div class="items">
+                      <span class="item active" data-name="all" id="work2">All</span>
+                      <span class="item" data-name="Computer" id="work3">Activities Computer</span>
+                      <span class="item" data-name="Classroom" id="work4">Activities Classroom</span>
+                      <span class="item" data-name="School" id="work5">Activities School</span>
+                    </div>
+                  </nav>
+                  <!-- filter Images -->
+                  <div class="gallery">
+                    <div class="image" data-name="School" 
+                    data-detailen="Being an agent to help and perform benefits in the National Mother's Day activities." 
+                    data-detailth="ได้เป็นตัวแทนช่วยเหลือและบำเพ็ญประโยชน์ในกิจกรรมวันแม่แห่งชาติ"><span><img src="picture/act/1.jpg" alt=""></span></div>
+
+                    <div class="image" data-name="Classroom" 
+                    data-detailen="Participate in civic duty activities to preserve Thai traditions on July 1, 2022."
+                    data-detailth="ได้เข้าร่วมกิจกรรมของห้องเรียนรายวิชาหน้าที่พลเมือง สืบสานประเพณีไทย วันที่ 1 กรกฏาคม 2565"><span><img src="picture/act/2.jpg" alt=""></span></div>
+                    
+                    <div class="image" data-name="School" data-detailen="Participated in the ASEAN Education Week activities of Sa Kaeo School in the academic year 2022."
+                    data-detailth="ได้เข้าร่วมกิจกรรมสัปดาห์วันอาเซียนศึกษาของโรงเรียนสระแก้วปีการศึกษา 2565"><span><img src="picture/act/3.jpg" alt=""></span></div>
+
+                    <div class="image" data-name="School" data-detailen="Participate in activities to carry on the tradition of accepting brothers and sisters, codes of Sa Kaeo School in the academic year 2022."
+                    data-detailth="ได้เข้าร่วมกิจกรรมสืบสานประเพณีรับน้องพี่รหัสน้องรหัสของโรงเรียนสระแก้วปีการศึกษา 2565"><span><img src="picture/act/4.jpg" alt=""></span></div>
+
+                    <div class="image" data-name="School" data-detailen="Participated in the brother and sister guidance activities of the graduated students of Sa Kaeo School."
+                    data-detailth="ได้เข้าร่วมกิจกรรมแนะแนวพี่พบน้องของนักเรียนที่จบการศึกษาของโรงเรียนสระแก้ว"><span><img src="picture/act/5.jpg" alt=""></span></div>
+
+                    <div class="image" data-name="School" data-detailen="Participated in public welfare activities, collecting garbage in the school area."
+                    data-detailth="ได้เข้าร่วมกิจกรรมบำเพ็ญประโยชน์จิตสาธารณะเก็บขยะบริเวณโรงเรียน"><span><img src="picture/act/6.jpg" alt=""></span></div>
+
+                    <div class="image" data-name="School" data-detailen="Doing volunteer activities 'Learn how to dig the soil and prepare the area for planting watermelons in the villages' greenhouses'"
+                    data-detailth="ทำกิจกรรมจิตอาสา 'เรียนรู้การขุดดินเตรียมพื้นที่ปลูกแตงโมในโรงเรือนของชาวบ้าน'"><span><img src="picture/act/7.jpg" alt=""></span></div>
+                    
+                    <div class="image" data-name="School" data-detailen="Do volunteer activities Learn how to make tea leaves from mulberry leaves as a product to sell to bring money to donate to the villagers in need."
+                    data-detailth="ทำกิจกรรมจิตอาสา เรียนรู้การทำชาจากใบหม่อนเป็นผลิตภัณฑ์ออกจำหน่ายเพื่อนำเงินไปบริจาคให้กับชาวบ้านที่ขาดแคลน"><span><img src="picture/act/8.jpg" alt=""></span></div>
+
+                    <div class="image" data-name="School" data-detailen="Was a representative to attend the event to welcome Princess Ubolratana Rajakanya Sariri Pattanapanwidee, To be number one activity."
+                    data-detailth="ได้เป็นตัวแทนเข้าร่วมกิจกรรมรับเสด็จทูลกะหม่อมหญิงอุบลรัคนราชกัญญาสริริพัฒนาพรรณวิดี กิจกรรม To be number one"><span><img src="picture/act/9.jpg" alt=""></span></div>
+
+                    <div class="image" data-name="School" data-detailen="Represented the IS Open House exhibition activities and presented the work."
+                    data-detailth="ได้เป็นตัวแทนนำเสนอกิจกรรมนิทรรศการ IS Open House และ นำเสนอผลงาน"><span><img src="picture/act/10.jpg" alt=""></span></div>
+
+                    <div class="image" data-name="School" data-detailen="Represented as an elder to take care of activities within the sports day of Sa Kaeo School." 
+                    data-detailth="ได้เป็นตัวแทนเป็นพี่ดูแลกิจกรรมภายในงานกีฬาสีของโรงเรียนสระแก้ว"><span><img src="picture/act/11.jpg" alt=""></span></div>
+
+                    <div class="image" data-name="Computer" data-detailen="Do product design activities that interest you through Adobe Photoshop."
+                    data-detailth="ทำกิจกรรมออกแบบผลิตภัณฑ์ที่ตนเองสนใจผ่านโปรแกรม Adobe Photoshop"><span><img src="picture/act/12.png" alt=""></span></div>
+
+                    <div class="image" data-name="Computer" data-detailen="Be an agent to design a logo for mulberry tea products to be distributed in order to bring money to donate to the needy villagers through the Adobe Photoshop program.."
+                    data-detailth="ได้เป็นตัวแทนออกแบบ Logo ผลิตภัณฑ์ชาใบหม่อนเพื่อออกจำหน่ายเพื่อนำเงินไปบริจาคให้กับชาวบ้านที่ขาดแคลน ผ่านโปรแกรม Adobe Photoshop"><span><img src="picture/act/13.png" alt=""></span></div>
+
+                    <div class="image" data-name="Computer" data-detailen="Being an editing agent, creating a short film on the topic 'Violence' A story about bullying reflecting society within the school via Sony Vegas program. Link:https://youtu.be/sPDZUgoPpaU"
+                    data-detailth="ได้เป็นตัวแทนตัดต่อจัดทำภาพยนต์สั้นหัวข้อ ''ความรุนแรง'' เรื่องราวเกี่ยวกับการ bully เพื่อสะท้อนสังคมภายในโรงเรียน ผ่านโปรแกรม Sony Vegas Link:https://youtu.be/sPDZUgoPpaU "><span><img src="picture/act/14.png" alt=""></span></div>
+
+                    <div class="image" data-name="Computer" data-detailen="Participated in computer project activities to develop websites through html css php javascript language."
+                    data-detailth="ได้เข้าร่วมกิจกรรมโครงงานคอมพิวเตอร์ในการพัฒนาเว็บไซต์ ผ่านภาษา html css php javascript"><span><img src="picture/act/15.png" alt=""></span></div>
+
+                    <div class="image" data-name="Computer" data-detailen="Have done classroom activities about writing websites with html language."
+                    data-detailth="ได้ทำกิจกรรมห้องเรียนเกี่ยวกับการเขียนเว็บไซต์ด้วย ภาษา html"><span><img src="picture/act/16.png" alt=""></span></div>
+
+                    <div class="image" data-name="Computer" data-detailen="Participated in writing robot programs in the classroom through the Arduino program."
+                    data-detailth="ได้เข้าร่วมเขียนโปรแกรมหุ่นยนต์ภายในห้องเรียน ผ่านโปรแกรม Arduino"><span><img src="picture/act/17.png" alt=""></span></div>
+                  </div>
+                </div>
+                <!-- fullscreen img preview box -->
+                <div class="preview-box">
+                  <div class="details">
+                    <span class="icon fas fa-times"></span>
+                  </div>
+                  <div class="image-box"><img src="" alt=""></div>
+                  <div class="details-text">
+                    <span class="detail"><p></p></span>
+                  </div>
+                </div>
+                <div class="shadow"></div>
+              </div>
+          </section>
+<!-- 
+          ------------------------------------------------------- -->
+
+          <section id="Cerfi">
+            <div class="cerfi-main">
+              <div class="header-cerfi" id="cerfi1">My Certificates</div>
+              <div class="wrapper">
+                <!-- filter Items -->
+                <nav>
+                  <div class="items">
+                    <span class="item active" data-name="all" id="cerfi2">All Certificates</span>
+                    <span class="item" data-name="Computer" id="cerfi3">Certificates Computer</span>
+                    <span class="item" data-name="School" id="cerfi4">Certificates School</span>
+                  </div>
+                </nav>
+                <!-- filter Images -->
+                <div class="gallery">
+                  <div class="image" data-name="Computer" data-detailen="Find self-knowledge about the html language."
+                  data-detailth="ค้นหาความรู้ด้วยตนเองเกี่ยวกับภาษา html"><span><img src="picture/cerfi/1.jpg" alt=""></span></div>
+
+                  <div class="image" data-name="Computer" data-detailen="Find self-knowledge about the css language."
+                  data-detailth="ค้นหาความรู้ด้วยตนเองเกี่ยวกับภาษา css"><span><img src="picture/cerfi/2.jpg" alt=""></span></div>
+
+                  <div class="image" data-name="Computer" data-detailen="Find self-knowledge about the php language."
+                  data-detailth="ค้นหาความรู้ด้วยตนเองเกี่ยวกับภาษา php"><span><img src="picture/cerfi/3.png" alt=""></span></div>
+
+                  <div class="image" data-name="School" data-detailen="Participate in activities Answering science problems for the academic year 2022."
+                  data-detailth="ได้เข้าร่วมกิจกรรม ตอบปัญหาวิทยาศาสตร์ ปีการศึกษา 2565"><span><img src="picture/cerfi/4.png" alt=""></span></div>
+
+                  <div class="image" data-name="School" data-detailen="Participated in the Open World Traveling University Festival ON ZOOM by Bewise Tutoring School."
+                  data-detailth="ได้เข้าร่วม มหกรรมเปิดโลกมหาวิทยาลัยสัญจร ON ZOOM โดยโรงเรียนกวดวิชาบีไวส์"><span><img src="picture/cerfi/5.png" alt=""></span></div>
+
+                  <div class="image" data-name="Computer" data-detailen="Finding self-knowledge about internet intelligence."
+                  data-detailth="ค้นหาความรู้ด้วยตนเองเกี่ยวกับความฉลาดทางการใช้อินเทอร์เน็ต"><span><img src="picture/cerfi/6.png" alt=""></span></div>
+
+                  <div class="image" data-name="Computer" data-detailen="Participated in the computer camp project Three-dimensional (3D) programming activities."
+                  data-detailth="ได้เข้าร่วมค่ายอารมโครงงานค่ายคอมพิวเตอร์ กิจกรรมเขียนโปรแกรมสามมิติ (3D)"><span><img src="picture/cerfi/7.jpg" alt=""></span></div>
+
+                  <div class="image" data-name="School" data-detailen="Participated in Thai language skills development camp activities."
+                  data-detailth="ได้เข้าร่วมกิจกรรมค่ายพัฒนาทักษะทางภาษาไทย"><span><img src="picture/cerfi/8.jpg" alt=""></span></div>
+
+                  <div class="image" data-name="School" data-detailen="Awarded Silver Medal Presentation of the IS project for the academic year 2020."
+                  data-detailth="ได้รับรางวัลระดับเหรียญเงิน การนำเสนอโครงงาน IS ปีการศึกษา 2563"><span><img src="picture/cerfi/9.jpg" alt=""></span></div>
+
+                  <div class="image" data-name="School" data-detailen="Awarded a gold medal Presentation of the IS project for the academic year 2022."
+                  data-detailth="ได้รับรางวัลระดับเหรียญทอง การนำเสนอโครงงาน IS ปีการศึกษา 2565"><span><img src="picture/cerfi/10.jpg" alt=""></span></div>
+
+                  <div class="image" data-name="School" data-detailen="Participated in the IS project presentation for the academic year 2022."
+                  data-detailth="ได้เข้าร่วมนำเสนอผลงานโครงงาน IS ปีการศึกษา 2565"><span><img src="picture/cerfi/11.jpg" alt=""></span></div>
+
+                  <div class="image" data-name="School" data-detailen="Participated in IS Open House exhibition activities for the academic year 2022."
+                  data-detailth="ได้เข้าร่วกิจกรรม นิทรรศการ IS Open House ปีการศึกษา 2565"><span><img src="picture/cerfi/12.jpg" alt=""></span></div>
+
+                  <div class="image" data-name="School" data-detailen="Participate in competitive activities Folk sport, land boat competition, male team type, high school, 1st runner-up, academic year 2022."
+                  data-detailth="ได้เข้าร่วมกิจกรรมแข่งขัน กีฬาพื้นบ้านการแข่งขันเรือบก ประเภททีมชาย มัธยมปลาย รางวัลรองชนะเลิศอันดับ 1 ปีการศึกษา 2565"><span><img src="picture/cerfi/13.jpg" alt=""></span></div>
+                </div>
+              </div>
+              <!-- fullscreen img preview box -->
+              <div class="preview-box">
+                <div class="details">
+                  <span class="icon fas fa-times"></span></div>
+                <div class="image-box"><img src="" alt=""></div>
+              </div>
+              <div class="details-text">
+                <span class="detail"><p></p></span>
+              </div>
+              <div class="shadow"></div>
+            </div>
+        </section>
+
+
+        <!-- ------------------------------------------------------- -->
+
+        <section id="contact">
+          <div class="contactUs">
+            <div class="title">
+              <h2 id="contact1">Contact</h2>
+            </div>
+            <div class="box">
+              <!-- Form -->
+              <div class="contact form">
+                <h3 id="contact2">Send a Message</h3>
+                <form onsubmit="sendEmail(); reset(); return false;">
+                  <div class="formBox">
+                    <div class="row50">
+                      <div class="inputBox">
+                        <span id="contact3">First Name</span>
+                        <input type="text" id="Firstname" placeholder="Nutchanon">
+                      </div>
+                      <div class="inputBox">
+                        <span id="contact4">Last Name</span>
+                        <input type="text" id="Lastname" placeholder="Sapmeechai">
+                      </div>
+                    </div>
+
+                    <div class="row50">
+                      <div class="inputBox">
+                        <span id="contact5">Email</span>
+                        <input type="text" id="Email" placeholder="natchnon654321@gmail.com">
+                      </div>
+                      <div class="inputBox">
+                        <span id="contact6">Mobile</span>
+                        <input type="text" id="Phone" placeholder="090-297-4175">
+                      </div>
+                    </div>
+
+                    <div class="row100">
+                      <div class="inputBox">
+                        <span id="contact7">Message</span>
+                        <textarea id="Message" placeholder="Write your message here..."></textarea>
+                      </div>
+                    </div>
+
+                    <div class="row100">
+                      <div class="inputBox">
+                       <input type="submit" id="contact10" value="Send">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- infoBox -->
+              <div class="contact info">
+                <h3 id="contact8">Contact Info</h3>
+                <div class="infoBox">
+                  <div>
+                    <span><ion-icon name="location"></ion-icon></span>
+                    <p id="contact9">33/2 Thetsaban 8 Road,Sa Kaeo Subdistrict,Mueang Sa Kaeo District SaKaeo Province</p>
+                  </div>
+                  <div>
+                    <span><ion-icon name="mail"></ion-icon></span>
+                    <a href="mailto:natchnon654321@gmail.com">natchnon654321@gmail.com</a>
+                  </div>
+                  <div>
+                    <span><ion-icon name="call"></ion-icon></span>
+                    <a href="tel:090-297-4175">090-297-4175</a>
+                  </div>
+                  <!-- Socail Media  -->
+                  <ul class="sci">
+                    <li><a href="https://www.facebook.com/Natx0082/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="https://twitter.com/zeeouil"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href="https://line.me/ti/p/Lmik8Ypb5c"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    <li><a href="https://www.instagram.com/n_nnat_48/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="https://github.com/Natchkung"><ion-icon name="logo-github"></ion-icon></a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Map -->
+              <div class="contact map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.1516892106789!2d102.06158291331046!3d13.8133776831312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311c83d011d5f0ab%3A0x47bacb157e3e0310!2z4Lij4Liw4LmA4Lia4Li14Lii4LiH4LmB4LiE4LiE4LiV4Lix4LiqIOC4quC4o-C4sOC5geC4geC5ieC4pw!5e0!3m2!1sth!2sth!4v1671262264095!5m2!1sth!2sth"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+          </section>
+
+          
+          <!-- ------------------------------------- -->
+          <div id="footer">
+            <footer>
+              <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+              </div>
+              <ul class="social_icon">
+                <li><a href="https://www.facebook.com/Natx0082/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="https://twitter.com/zeeouil"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href="https://line.me/ti/p/Lmik8Ypb5c"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    <li><a href="https://www.instagram.com/n_nnat_48/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="https://github.com/Natchkung"><ion-icon name="logo-github"></ion-icon></a></li>
+              </ul>
+              <ul class="menu">
+                <li><a class="lang_header_home" href="#home">Home</a></li>
+                <li><a class="lang_header_about_me" href="#about-me">About</a></li>
+                <li><a class="lang_header_personal" href="#personal">Introduce</a></li>
+                <li><a class="lang_header_education" href="#education">Education</a></li>
+                <li><a class="lang_header_work" href="#work">Works</a></li>
+                <li><a class="lang_header_cerfi" href="#Cerfi">Certificates</a></li>
+                <li><a class="lang_header_contact" href="#contact">Contact</a></li>
+              </ul>
+              <p id="footer_copyrights">Copyright © 2022.Nutchanon Sapmeechai</p>
+            </footer>
+          </div>
+          
+
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+          <!-- Send Email -->
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+
+      
+          <!-- -----------end-------------- -->
+          
+
+          
+        
+            
+          <!-- </div>
+        </div>
+    </div>
+  </header> -->
+
+  
+  
+
+  
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+  <script src="language.js"></script>
+</body>
+</html>
